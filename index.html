@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nebot Fred - Professional Web Developer, App Developer, UX/UI Designer, and Branding Creator based in Yaoundé, Cameroon.">
+    <meta name="keywords" content="Nebot Fred, Portfolio, Web Developer, UX/UI Designer, Cameroon, Yaoundé, App Developer">
+    <meta name="author" content="Nebot Fred">
+    <title>Nebot Fred | Web Developer & Designer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Space Grotesk,sans-serif' font-size='50' font-weight='700' fill='white' text-anchor='middle'%3ENF%3C/text%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">NF</div>
+            <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </div>
+        </label>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="brand-first">NEBOT</span><span class="brand-last">FRED</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home" data-i18n="nav.home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav.skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education" data-i18n="nav.education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav.work">Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav.services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en" title="English">EN</button>
+                    <button class="lang-btn" data-lang="fr" title="Français">FR</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <canvas class="hero-canvas" id="hero-canvas"></canvas>
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-7">
+                    <div class="hero-content" data-reveal="left">
+                        <div class="hero-badge">
+                            <span class="badge-pulse"></span>
+                            <span data-i18n="hero.badge">Available for work</span>
+                        </div>
+                        <span class="hero-greeting" data-i18n="hero.greeting">Hello, I'm</span>
+                        <h1 class="hero-name">Nebot Fred</h1>
+                        <h2 class="hero-title">
+                            <span class="typing-text"></span>
+                            <span class="typing-cursor">|</span>
+                        </h2>
+                        <p class="hero-text" data-i18n="hero.text">Crafting exceptional digital experiences through code and design. Based in Yaoundé, Cameroon.</p>
+                        <div class="hero-btns mt-4">
+                            <a href="#projects" class="btn btn-primary me-3">
+                                <span data-i18n="hero.btn.work">View My Work</span>
+                                <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                            <a href="#contact" class="btn btn-outline-primary">
+                                <span data-i18n="hero.btn.contact">Contact Me</span>
+                            </a>
+                        </div>
+                        <div class="hero-stats mt-5">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="5">0</span>
+                                <span class="stat-plus">+</span>
+                                <span class="stat-label" data-i18n="hero.stat.exp">Years Exp.</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="50">0</span>
+                                <span class="stat-plus">+</span>
+                                <span class="stat-label" data-i18n="hero.stat.projects">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="30">0</span>
+                                <span class="stat-plus">+</span>
+                                <span class="stat-label" data-i18n="hero.stat.clients">Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center mt-5 mt-lg-0">
+                    <div class="hero-image-container" data-reveal="right">
+                        <div class="hero-shape"></div>
+                        <div class="hero-shape hero-shape-2"></div>
+                        <div class="hero-shape hero-shape-3"></div>
+                            <img src="assets/images/profile.jpg" alt="Nebot Fred" class="img-fluid hero-image">
+                        <div class="hero-status">
+                            <div class="status-dot"></div>
+                            <span data-i18n="hero.status">Open to work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="about-image-wrapper" data-reveal="left">
+                        <div class="about-img-border"></div>
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop" alt="About Nebot" class="img-fluid about-img">
+                        <div class="experience-badge">
+                            <span class="number">5+</span>
+                            <span class="text" data-i18n="about.exp.text">Years of<br>Experience</span>
+                        </div>
+                        <div class="about-shape"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <div class="section-title mb-4" data-reveal="right">
+                        <span class="subtitle" data-i18n="about.subtitle">About Me</span>
+                        <h2 data-i18n="about.title">Passionate Developer &<br>Creative Designer</h2>
+                    </div>
+                    <p class="about-desc mb-4" data-reveal="right" data-delay="100" data-i18n="about.desc">
+                        I am a versatile Web Developer, App Developer, UX/UI Designer, and Branding Creator based in Yaoundé, Cameroon. My goal is to bridge the gap between complex technology and intuitive user experiences.
+                    </p>
+                    <div class="personal-info row mb-4" data-reveal="right" data-delay="200">
+                        <div class="col-sm-6 mb-3">
+                            <div class="info-item">
+                                <span class="label" data-i18n="about.location">Location:</span>
+                                <span class="value" data-i18n="about.location.val">Yaoundé, Cameroon</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="info-item">
+                                <span class="label" data-i18n="about.email">Email:</span>
+                                <span class="value">nembotfred112@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="info-item">
+                                <span class="label" data-i18n="about.phone">Phone:</span>
+                                <span class="value">+237 693 045 335</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="info-item">
+                                <span class="label" data-i18n="about.freelance">Freelance:</span>
+                                <span class="value available" data-i18n="about.freelance.val">Available</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-btns" data-reveal="right" data-delay="300">
+                        <a href="#contact" class="btn btn-primary"><span data-i18n="about.btn.talk">Let's Talk</span></a>
+                        <a href="javascript:void(0)" class="btn btn-outline-primary ms-3" onclick="alert('CV coming soon!')">
+                            <i class="fas fa-download me-2"></i><span data-i18n="about.btn.cv">Download CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-light-alt">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-reveal="top">
+                <span class="subtitle" data-i18n="skills.subtitle">My Expertise</span>
+                <h2 data-i18n="skills.title">Professional Skills</h2>
+                <p class="section-desc" data-i18n="skills.desc">Technologies and tools I work with on a daily basis</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-reveal="top" data-delay="0">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3 data-i18n="skills.frontend">Frontend Dev</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML/CSS/JS</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="95"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>React/Vue</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Bootstrap/Tailwind</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="90"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-reveal="top" data-delay="100">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3 data-i18n="skills.app">App Development</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>React Native</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="80"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Flutter</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="75"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Firebase</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="85"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-reveal="top" data-delay="200">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-pencil-ruler"></i></div>
+                        <h3 data-i18n="skills.uiux">UI/UX Design</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Figma/Adobe XD</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Prototyping</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>User Research</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="80"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-reveal="top" data-delay="300">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h3 data-i18n="skills.branding">Branding</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Logo Design</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="95"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Brand Identity</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Graphic Design</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar" style="width: 0" data-width="85"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-reveal="top">
+                <span class="subtitle" data-i18n="education.subtitle">Academic Journey</span>
+                <h2 data-i18n="education.title">Education</h2>
+                <p class="section-desc" data-i18n="education.desc">My educational background and qualifications</p>
+            </div>
+            <div class="timeline" data-reveal="top">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">Present</span>
+                        <h3 data-i18n="education.item1.title">Bachelor Degree (Leading)</h3>
+                        <p data-i18n="education.item1.desc">Pursuing higher education in Computer Science/Engineering, focusing on advanced software architectures and design principles.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">2022 - 2024</span>
+                        <h3 data-i18n="education.item2.title">Higher National Diploma (HND)</h3>
+                        <p data-i18n="education.item2.desc">Specialized in Software Engineering and Application Development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">2020 - 2022</span>
+                        <h3 data-i18n="education.item3.title">GCE Advanced Level</h3>
+                        <p data-i18n="education.item3.desc">Completed with excellence in Science and Mathematics subjects.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">2018 - 2020</span>
+                        <h3 data-i18n="education.item4.title">GCE Ordinary Level</h3>
+                        <p data-i18n="education.item4.desc">Foundation of academic excellence in general sciences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-light-alt">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-reveal="top">
+                <span class="subtitle" data-i18n="projects.subtitle">Recent Work</span>
+                <h2 data-i18n="projects.title">Featured Projects</h2>
+                <p class="section-desc" data-i18n="projects.desc">Some of my recent projects and case studies</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-reveal="top" data-delay="0">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=600&auto=format&fit=crop" alt="Project 1">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link-btn"><i class="fas fa-link"></i></a>
+                                    <a href="#" class="project-link-btn"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category" data-i18n="projects.item1.cat">E-commerce</span>
+                            <h3 data-i18n="projects.item1.title">Modern E-commerce</h3>
+                            <p data-i18n="projects.item1.desc">Full-stack shopping experience with real-time inventory management.</p>
+                            <div class="tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-reveal="top" data-delay="100">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600&auto=format&fit=crop" alt="Project 2">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link-btn"><i class="fas fa-link"></i></a>
+                                    <a href="#" class="project-link-btn"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category" data-i18n="projects.item2.cat">Health</span>
+                            <h3 data-i18n="projects.item2.title">Health Track App</h3>
+                            <p data-i18n="projects.item2.desc">Mobile application for tracking fitness and nutritional goals.</p>
+                            <div class="tags">
+                                <span>Flutter</span>
+                                <span>Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-reveal="top" data-delay="200">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=600&auto=format&fit=crop" alt="Project 3">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link-btn"><i class="fas fa-link"></i></a>
+                                    <a href="#" class="project-link-btn"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category" data-i18n="projects.item3.cat">Branding</span>
+                            <h3 data-i18n="projects.item3.title">Corporate Branding</h3>
+                            <p data-i18n="projects.item3.desc">Complete visual identity design for a tech startup.</p>
+                            <div class="tags">
+                                <span>Figma</span>
+                                <span>Illustrator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5" data-reveal="top">
+                <a href="#" class="btn btn-outline-primary">
+                    <span data-i18n="projects.btn">View All Projects</span>
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-reveal="top">
+                <span class="subtitle" data-i18n="services.subtitle">What I Offer</span>
+                <h2 data-i18n="services.title">My Services</h2>
+                <p class="section-desc" data-i18n="services.desc">Professional services I provide to bring your ideas to life</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-reveal="top" data-delay="0">
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                        </div>
+                        <h3 data-i18n="services.web">Web Development</h3>
+                        <p data-i18n="services.web.desc">Building responsive, fast, and secure websites tailored to your needs.</p>
+                        <a href="#" class="service-link"><span data-i18n="services.link">Learn More</span> <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-reveal="top" data-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        </div>
+                        <h3 data-i18n="services.app">App Development</h3>
+                        <p data-i18n="services.app.desc">Creating high-performance mobile applications for iOS and Android.</p>
+                        <a href="#" class="service-link"><span data-i18n="services.link">Learn More</span> <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-reveal="top" data-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                        </div>
+                        <h3 data-i18n="services.uiux">UX/UI Design</h3>
+                        <p data-i18n="services.uiux.desc">Designing intuitive and beautiful user interfaces that enhance user satisfaction.</p>
+                        <a href="#" class="service-link"><span data-i18n="services.link">Learn More</span> <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-reveal="top" data-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <div class="service-icon"><i class="fas fa-bezier-curve"></i></div>
+                        </div>
+                        <h3 data-i18n="services.branding">Branding Design</h3>
+                        <p data-i18n="services.branding.desc">Developing unique brand identities that make your business stand out.</p>
+                        <a href="#" class="service-link"><span data-i18n="services.link">Learn More</span> <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding bg-light-alt">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-reveal="top">
+                <span class="subtitle" data-i18n="testimonials.subtitle">Testimonials</span>
+                <h2 data-i18n="testimonials.title">What Clients Say</h2>
+                <p class="section-desc" data-i18n="testimonials.desc">Feedback from people I've worked with</p>
+            </div>
+            <div class="testimonial-slider" data-reveal="top">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonials.item1.text">"Nebot delivered an exceptional website that exceeded our expectations. His attention to detail and creative vision is outstanding."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JD</div>
+                            <div class="author-info">
+                                <h4 data-i18n="testimonials.item1.name">John Doe</h4>
+                                <span data-i18n="testimonials.item1.role">CEO, TechStart</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonials.item2.text">"Working with Nebot was a great experience. He understood our requirements perfectly and delivered on time."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SM</div>
+                            <div class="author-info">
+                                <h4 data-i18n="testimonials.item2.name">Sarah M.</h4>
+                                <span data-i18n="testimonials.item2.role">Product Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonials.item3.text">"The mobile app Nebot built for us is fantastic. Clean code, intuitive UI, and great performance."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AK</div>
+                            <div class="author-info">
+                                <h4 data-i18n="testimonials.item3.name">Alex K.</h4>
+                                <span data-i18n="testimonials.item3.role">Founder, AppVentures</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonials.item4.text">"Nebot's branding work gave our company a fresh, modern look. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">PL</div>
+                            <div class="author-info">
+                                <h4 data-i18n="testimonials.item4.name">Paul L.</h4>
+                                <span data-i18n="testimonials.item4.role">Marketing Director</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <div class="section-title mb-4" data-reveal="left">
+                        <span class="subtitle" data-i18n="contact.subtitle">Contact Me</span>
+                        <h2 data-i18n="contact.title">Let's Work Together</h2>
+                    </div>
+                    <p class="contact-desc mb-5" data-reveal="left" data-delay="100" data-i18n="contact.desc">Have a project in mind or just want to say hi? Feel free to reach out through any of the channels below.</p>
+
+                    <div class="contact-info" data-reveal="left" data-delay="200">
+                        <a href="mailto:nembotfred112@gmail.com" class="contact-item-link">
+                            <div class="contact-item">
+                                <div class="icon"><i class="fas fa-envelope"></i></div>
+                                <div class="text">
+                                    <h4 data-i18n="contact.email">Email</h4>
+                                    <p>nembotfred112@gmail.com</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tel:+237693045335" class="contact-item-link">
+                            <div class="contact-item">
+                                <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="text">
+                                    <h4 data-i18n="contact.phone">Phone</h4>
+                                    <p>+237 693 045 335</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/237693045335" target="_blank" class="contact-item-link">
+                            <div class="contact-item">
+                                <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                                <div class="text">
+                                    <h4 data-i18n="contact.whatsapp">WhatsApp</h4>
+                                    <p data-i18n="contact.whatsapp.val">Chat on WhatsApp</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://t.me/+237655735576" target="_blank" class="contact-item-link">
+                            <div class="contact-item">
+                                <div class="icon"><i class="fab fa-telegram-plane"></i></div>
+                                <div class="text">
+                                    <h4 data-i18n="contact.telegram">Telegram</h4>
+                                    <p>@nebotfred</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="text">
+                                <h4 data-i18n="contact.location">Location</h4>
+                                <p data-i18n="contact.location.val">Yaoundé, Cameroon</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links mt-5" data-reveal="left" data-delay="300">
+                        <a href="https://wa.me/237693045335" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/+237655735576" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://linkedin.com/in/nebotfred" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/nebotfred" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/nebotfred" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-reveal="right">
+                    <div class="contact-form-wrapper">
+                        <div class="form-header">
+                            <h3 data-i18n="contact.form.title">Send Me a Message</h3>
+                            <p data-i18n="contact.form.subtitle">I'll get back to you within 24 hours</p>
+                        </div>
+                        <form id="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name"><span data-i18n="contact.form.name">Your Name</span> <span class="required">*</span></label>
+                                        <input type="text" class="form-control" id="name" placeholder="John Doe" required data-i18n-placeholder="contact.form.name.placeholder">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email"><span data-i18n="contact.form.email">Your Email</span> <span class="required">*</span></label>
+                                        <input type="email" class="form-control" id="email" placeholder="john@example.com" required data-i18n-placeholder="contact.form.email.placeholder">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="subject"><span data-i18n="contact.form.subject">Subject</span></label>
+                                        <input type="text" class="form-control" id="subject" placeholder="Project Discussion" data-i18n-placeholder="contact.form.subject.placeholder">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="message"><span data-i18n="contact.form.msg">Message</span> <span class="required">*</span></label>
+                                        <textarea class="form-control" placeholder="Tell me about your project..." id="message" style="height: 150px" required data-i18n-placeholder="contact.form.msg.placeholder"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary btn-lg w-100 py-3" type="submit">
+                                        <span class="btn-text" data-i18n="contact.form.btn">Send Message</span>
+                                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                        <a class="navbar-brand m-0" href="#">
+                            <span class="brand-first">NEBOT</span><span class="brand-last">FRED</span>
+                        </a>
+                        <p class="footer-desc mt-3" data-i18n="footer.desc">Crafting exceptional digital experiences through code and design.</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                        <div class="footer-socials">
+                            <a href="https://wa.me/237693045335" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://t.me/+237655735576" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://linkedin.com/in/nebotfred" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/nebotfred" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center text-md-end">
+                        <ul class="footer-links list-inline mb-0">
+                            <li class="list-inline-item"><a href="#home" data-i18n="footer.home">Home</a></li>
+                            <li class="list-inline-item"><a href="#about" data-i18n="footer.about">About</a></li>
+                            <li class="list-inline-item"><a href="#projects" data-i18n="footer.work">Work</a></li>
+                            <li class="list-inline-item"><a href="#contact" data-i18n="footer.contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">&copy; 2026 Nebot Fred. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Translator -->
+    <script src="assets/js/translations.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
